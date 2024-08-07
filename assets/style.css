@@ -1,0 +1,78 @@
+/* Estilos básicos para el cuerpo */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+}
+
+/* Estilos para la galería */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Estilos para los elementos de la galería */
+.gallery-item {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: #fff;
+    transition: transform 0.3s ease;
+}
+
+/* Efecto hover en los elementos de la galería */
+.gallery-item:hover {
+    transform: scale(1.05);
+}
+
+/* Estilos para las imágenes */
+.gallery-item img {
+    width: 100%;
+    display: block;
+    border-radius: 10px 10px 0 0;
+}
+
+/* Reglas de medios */
+
+/* Pantalla Extra Large (>=1200px) */
+@media (min-width: 1200px) {
+    .gallery-item {
+        width: calc(25% - 20px);
+    }
+}
+
+/* Pantalla Large (>=992px y <1200px) */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .gallery-item {
+        width: calc(33.333% - 20px);
+    }
+}
+
+/* Pantalla Medium (>=768px y <992px) */
+@media (min-width: 768px) and (max-width: 991px) {
+    .gallery-item {
+        width: calc(50% - 20px);
+    }
+}
+
+/* Pantalla Small (>=576px y <768px) */
+@media (min-width: 576px) and (max-width: 767px) {
+    .gallery-item {
+        width: calc(50% - 20px);
+    }
+}
+
+/* Pantalla Extra Small (<576px) */
+@media (max-width: 575px) {
+    .gallery-item {
+        width: calc(100% - 20px);
+    }
+}
